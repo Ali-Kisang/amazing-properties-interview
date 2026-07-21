@@ -230,7 +230,7 @@ make docker-down
 ## 📧 Submission Links
 
 - **GitHub Repository**: https://github.com/Ali-Kisang/amazing-properties-interview
-- **Video Interview**: [Your YouTube/Google Drive link]
+- **Video Interview**: https://drive.google.com/file/d/1AVVWcz-QLKz-KvNfy87unshHFbrwLExc/view?usp=sharing
 - **Facebook Demo Recording**: [Your Google Drive/Dropbox link]
 
 ---
@@ -241,7 +241,7 @@ Thank you for reviewing my assessment. I look forward to discussing how I can co
 
 ---
 
-**Built with ❤️ for Amazing Properties**  
+**Built  for Amazing Properties**  
 **Developer:** Alex Kisang  
 **Date:** July 2026
 
