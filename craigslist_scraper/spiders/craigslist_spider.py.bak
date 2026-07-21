@@ -1,0 +1,206 @@
+import scrapy
+from scrapy.loader import ItemLoader
+from scrapy.exceptions import CloseSpider
+from urllib.parse import urljoin
+import re
+from datetime import datetime
+from loguru import logger
+import hashlib
+import os
+import sys
+
+# Add current directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+# Now import with correct paths
+from items import PropertyItem
+from craigslist_scraper.utils.scheduler import CrawlScheduler
+
+
+class CraigslistSpider(scrapy.Spider):
+    """Main Craigslist spider following the architectural diagram"""
+    
+    name = "craigslist"
+    allowed_domains = ["craigslist.org"]
+    
+    def __init__(self, cities=None, min_price=50000, max_price=250000, *args, **kwargs):
+        super(CraigslistSpider, self).__init__(*args, **kwargs)
+        self.scheduler = CrawlScheduler()
+        self.seen_urls = set()
+        self.scraped_items = []
+        
+        # Get cities from command line or use defaults
+        cities_param = kwargs.get('cities')
+        self.cities = cities_param.split(',') if cities_param else ['milwaukee', 'columbus']
+        self.min_price = int(kwargs.get('min_price', 50000))
+        self.max_price = int(kwargs.get('max_price', 250000))
+        self.max_pages = 5
+        self.target_listings = 50
+        
+        logger.info(f"🕷️ Spider initialized for cities: {', '.join(self.cities)}")
+        logger.info(f"💰 Price range: ${self.min_price:,} - ${self.max_price:,}")
+        logger.info(f"🎯 Target listings: {self.target_listings}")
+    
+    def start_requests(self):
+        """Generate initial requests for each city"""
+        logger.info("🚀 Starting crawl scheduler...")
+        
+        for city in self.cities:
+            # Build search URL for this city
+            base_url = f"https://{city}.craigslist.org/search/rea"
+            params = {
+                'query': 'single family home|duplex|multi-family|investment',
+                'min_price': self.min_price,
+                'max_price': self.max_price,
+                'availabilityMode': '0'
+            }
+            query_string = '&'.join([f"{k}={v}" for k, v in params.items()])
+            url = f"{base_url}?{query_string}"
+            
+            yield scrapy.Request(
+                url=url,
+                callback=self.parse_search_results,
+                meta={'city': city, 'page': 1},
+                errback=self.handle_error,
+                headers={
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                    'Accept-Language': 'en-US,en;q=0.5',
+                }
+            )
+    
+    def parse_search_results(self, response):
+        """Parse search results page - this is the URL Collector"""
+        city = response.meta['city']
+        page = response.meta['page']
+        
+        listings = response.css('li[data-pid]')
+        logger.info(f"📍 {city} - Page {page}: Found {len(listings)} listings")
+        
+        if not listings:
+            logger.warning(f"No listings found for {city} on page {page}")
+            return
+        
+        for listing in listings:
+            listing_id = listing.attrib.get('data-pid')
+            if not listing_id:
+                continue
+            
+            link = listing.css('a[href]::attr(href)').get()
+            if not link:
+                continue
+            
+            detail_url = response.urljoin(link)
+            
+            # Duplicate URL Filter
+            if detail_url in self.seen_urls:
+                continue
+            self.seen_urls.add(detail_url)
+            
+            # Extract basic info from search page
+            title = listing.css('a[href]::text').get()
+            price = listing.css('span.price::text').get()
+            location = listing.css('span.px::text').get()
+            posted_date = listing.css('time::attr(datetime)').get()
+            
+            # Parse housing info (bedrooms/bathrooms)
+            housing_info = listing.css('span.housing::text').get()
+            bedrooms = None
+            bathrooms = None
+            
+            if housing_info:
+                br_match = re.search(r'(\d+)\s*br', housing_info)
+                ba_match = re.search(r'(\d+)\s*ba', housing_info)
+                if br_match:
+                    bedrooms = int(br_match.group(1))
+                if ba_match:
+                    bathrooms = int(ba_match.group(1))
+            
+            # Create initial item with basic data
+            item = PropertyItem()
+            item['title'] = title
+            item['price'] = price
+            item['address'] = location
+            item['bedrooms'] = bedrooms
+            item['bathrooms'] = bathrooms
+            item['listing_url'] = detail_url
+            item['posted_date'] = posted_date
+            item['city'] = city
+            item['listing_id'] = listing_id
+            item['scraped_at'] = datetime.now().isoformat()
+            item['unique_id'] = hashlib.md5(detail_url.encode()).hexdigest()[:16]
+            
+            # Navigate to detail page (Property Parser)
+            yield scrapy.Request(
+                url=detail_url,
+                callback=self.parse_property_detail,
+                meta={'item': item},
+                errback=self.handle_error,
+                dont_filter=True
+            )
+        
+        # Check if we've reached target
+        if len(self.seen_urls) >= self.target_listings:
+            logger.info(f"🎯 Target reached ({self.target_listings} listings), stopping crawl")
+            raise CloseSpider(f"Target of {self.target_listings} listings reached")
+        
+        # Pagination - find next page
+        if page < self.max_pages:
+            next_button = response.css('a.button.next::attr(href)').get()
+            if next_button:
+                next_url = response.urljoin(next_button)
+                yield scrapy.Request(
+                    url=next_url,
+                    callback=self.parse_search_results,
+                    meta={'city': city, 'page': page + 1},
+                    errback=self.handle_error
+                )
+    
+    def parse_property_detail(self, response):
+        """Parse property detail page"""
+        item = response.meta.get('item', PropertyItem())
+        
+        try:
+            # Get description
+            description = response.css('section#postingbody::text').getall()
+            if description:
+                item['description'] = ' '.join(description).strip()
+            
+            # Try to get better address
+            map_address = response.css('div.mapaddress::text').get()
+            if map_address and not item.get('address'):
+                item['address'] = map_address.strip()
+            
+            # Try to get square footage from description
+            if item.get('description'):
+                sqft_match = re.search(r'(\d+)\s*(?:sq\s*ft|sqft|square\s*feet?)', 
+                                     item['description'], re.IGNORECASE)
+                if sqft_match:
+                    item['square_feet'] = sqft_match.group(1)
+            
+            # Update bedrooms/bathrooms if not found
+            if not item.get('bedrooms') and item.get('title'):
+                br_match = re.search(r'(\d+)\s*(?:br|bed)', str(item['title']).lower())
+                if br_match:
+                    item['bedrooms'] = int(br_match.group(1))
+            
+            if not item.get('bathrooms') and item.get('title'):
+                ba_match = re.search(r'(\d+)\s*(?:ba|bath)', str(item['title']).lower())
+                if ba_match:
+                    item['bathrooms'] = int(ba_match.group(1))
+            
+            yield item
+            
+        except Exception as e:
+            logger.error(f"Error parsing detail page {response.url}: {e}")
+            yield item
+    
+    def handle_error(self, failure):
+        """Handle errors"""
+        logger.error(f"Request failed: {failure.request.url if failure.request else 'Unknown'}")
+        logger.error(f"Error: {failure.value}")
+    
+    def closed(self, reason):
+        """Spider closed - generate summary"""
+        logger.info(f"📊 Spider closed: {reason}")
+        logger.info(f"✅ Total unique listings collected: {len(self.seen_urls)}")

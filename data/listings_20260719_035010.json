@@ -1,0 +1,509 @@
+[
+  {
+    "title": "Extra! Extra! New 2bed2bath condo! Move in Ready! Wont last!",
+    "price": 149900,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-extra-extra-new-2bed2bath/ggPNQdABZK4vyThuyTMpHi",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.041530",
+    "unique_id": "fe79c66de1169cbc"
+  },
+  {
+    "title": "Move in Ready 2 bed 2 bath condo with Spacious basement in Hardesty Village!",
+    "price": 149900,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-move-in-ready-bed-bath-condo/nFc2Cv4jXdFmERKhTmNtYk",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.200988",
+    "unique_id": "0da84475b17438b5"
+  },
+  {
+    "title": "New listing! Two bedroom two bath condo with a full basement and carport!",
+    "price": 149900,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-new-listing-two-bedroom-two/kHyXCAtfzJJ2Qsxxqs1r1G",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.215315",
+    "unique_id": "06933c72645b1843"
+  },
+  {
+    "title": "Opportunity Knocks.....investor or business",
+    "price": 179900,
+    "location": "Westgate",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-opportunity-knocksinvestor-or/ou53TchGGhQYh4wmotgRwH",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.230082",
+    "unique_id": "89a4b5ef3d38f24b"
+  },
+  {
+    "title": "2 Upland Terrace",
+    "price": 249900,
+    "location": "Mount Vernon, OH",
+    "listing_url": "https://www.craigslist.org/view/d/mount-vernon-upland-terrace/rvCVr7QTjD3R5hHVBtdDc5",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.256565",
+    "unique_id": "4adbfd8cf590c7b2"
+  },
+  {
+    "title": "Youngstown investment property for sale",
+    "price": 80000,
+    "location": "Westside",
+    "listing_url": "https://www.craigslist.org/view/d/blacklick-youngstown-investment/9yQkrUEFgk8Y47UEnh3gJj",
+    "city": "columbus",
+    "matched_keywords": [
+      "investment"
+    ],
+    "scraped_at": "2026-07-19T03:50:18.273843",
+    "unique_id": "00d7911510a20e0d"
+  },
+  {
+    "title": "127 S James Rd",
+    "price": 200000,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-127-james-rd/cNTyU4zBSABjvVJZjaaHXV",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.290942",
+    "unique_id": "d7909fe1284db21a"
+  },
+  {
+    "title": "3358 Noe Bixby Rd",
+    "price": 175000,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-3358-noe-bixby-rd/abaesxXSLDv628TZ4MUTqP",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.308407",
+    "unique_id": "2638342a542c1c7e"
+  },
+  {
+    "title": "5130 Rutledge Dr. N",
+    "price": 200000,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-5130-rutledge-dr/gNicYadDVuiwiJ35HBJdjK",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.337902",
+    "unique_id": "f77de58bea0db4ac"
+  },
+  {
+    "title": "5368 Wendover Dr",
+    "price": 175000,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/brice-5368-wendover-dr/bD2VytvjWZkSibrLC4d7Tn",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.368625",
+    "unique_id": "b87e5d62cfafb76b"
+  },
+  {
+    "title": "4667 Janis Dr",
+    "price": 175000,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-4667-janis-dr/jLHVKh9eajskkRnfE5zTTL",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.381271",
+    "unique_id": "54666b6d4f328446"
+  },
+  {
+    "title": "285 S James Rd.",
+    "price": 250000,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-285-james-rd/uTSwstVme9LN2V6KMTKKM3",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.400786",
+    "unique_id": "2e887d476dd61106"
+  },
+  {
+    "title": "4944 Attica Dr",
+    "price": 150000,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-4944-attica-dr/jK6UR9Dwjf6TQ9SgG8HJDr",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.409833",
+    "unique_id": "233df55cf66627d1"
+  },
+  {
+    "title": "1324 Elderwood Ave",
+    "price": 150000,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-1324-elderwood-ave/1Ji812BZC4o3UDuW2NAwbg",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.425515",
+    "unique_id": "9d51a402fbde5572"
+  },
+  {
+    "title": "3656 Beechton Rd",
+    "price": 175000,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-3656-beechton-rd/6PdavptDmspvRfULtAAt95",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.452399",
+    "unique_id": "c82997888966ccb5"
+  },
+  {
+    "title": "80K Seller Financed 3 Story Home at 0% Interest",
+    "price": 80000,
+    "location": "Columbus Ohio",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-80k-seller-financed-story-home/bR9rwwyWqGQRTKR2gDvZ3k",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.468406",
+    "unique_id": "e41967eecafc03d4"
+  },
+  {
+    "title": "Starter House or Investment home",
+    "price": 175000,
+    "location": "Blendon twp Westerville Schools CMH taxes",
+    "listing_url": "https://www.craigslist.org/view/d/westerville-starter-house-or-investment/amnUE1pr5ZnXJ1M9Rjusr5",
+    "city": "columbus",
+    "matched_keywords": [
+      "investment"
+    ],
+    "scraped_at": "2026-07-19T03:50:18.486224",
+    "unique_id": "2241196e4f518962"
+  },
+  {
+    "title": "Snowbirds Teka village 55+ community negotiable",
+    "price": 195000,
+    "location": "st cloud",
+    "listing_url": "https://www.craigslist.org/view/d/saint-cloud-snowbirds-teka-village-55/remtch58zP5FfT4FG2yUJx",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.505316",
+    "unique_id": "284a5b36da324d0c"
+  },
+  {
+    "title": "4BR Fixer-Upper on Huge Corner Lot – Great Investment Opportunity!",
+    "price": 155000,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-4br-fixer-upper-on-huge-corner/spy8KRtPe7A9j82Gn92aCB",
+    "city": "columbus",
+    "matched_keywords": [
+      "investment"
+    ],
+    "scraped_at": "2026-07-19T03:50:18.519708",
+    "unique_id": "781c0ddf58bc5406"
+  },
+  {
+    "title": "CALLING ALL SNOWBIRDS!!!",
+    "price": 95000,
+    "location": "OCALA",
+    "listing_url": "https://www.craigslist.org/view/d/ocala-calling-all-snowbirds/4gco6x3kabJDw9L11KXkx8",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.538736",
+    "unique_id": "4688688ad31078e1"
+  },
+  {
+    "title": "Fix & Flip - Columbus, OH !!! 🏠🔨",
+    "price": 155000,
+    "location": "Columbus OH",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-fix-flip-columbus-oh/pCdSfVwMWxLNMFVvzq9LXf",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.556969",
+    "unique_id": "c99a1271a5b2941f"
+  },
+  {
+    "title": "Sunroom - Finished Basement - 2 Car Garage - Dishwasher -Move In Ready",
+    "price": 195000,
+    "location": "Columbus",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-sunroom-finished-basement-car/gK6G1oHS7matzgUAhxPNrf",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.569608",
+    "unique_id": "5f263d46f37d3cac"
+  },
+  {
+    "title": "House for sale",
+    "price": 100000,
+    "location": "Bloomingburg ohio",
+    "listing_url": "https://www.craigslist.org/view/d/bloomingburg-house-for-sale/o2vtfCbEFkVNGJJRXXLRqE",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.582646",
+    "unique_id": "dc2359ff2bb07d45"
+  },
+  {
+    "title": "2 bedroom Condo for sale Currently rented",
+    "price": 125000,
+    "location": "Reynoldsburg",
+    "listing_url": "https://www.craigslist.org/view/d/reynoldsburg-bedroom-condo-for-sale/vbFHB1C82TKvKpb5qrWcn5",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.593780",
+    "unique_id": "cf0bf41db59fc91b"
+  },
+  {
+    "title": "Single familys that need work",
+    "price": 230000,
+    "location": "Columbus, Ohio",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-single-familys-that-need-work/8H9quSULdL5xBvcube8sex",
+    "city": "columbus",
+    "matched_keywords": [
+      "single family"
+    ],
+    "scraped_at": "2026-07-19T03:50:18.607611",
+    "unique_id": "50ab0b4c9cc3a98e"
+  },
+  {
+    "title": "Distressed Properties",
+    "price": 104999,
+    "location": "Columbus, Ohio",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-distressed-properties/ghvRx7hzsM79ATUoFQpfR1",
+    "city": "columbus",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:18.618690",
+    "unique_id": "00bd3528edf3aacb"
+  },
+  {
+    "title": "OFF-MARKET DUPLEX INVESTMENT OPPORTUNITY",
+    "price": 125000,
+    "location": null,
+    "listing_url": "https://www.craigslist.org/view/d/columbus-off-market-duplex-investment/duKvy4E9UDu9p7PZthRHvX",
+    "city": "columbus",
+    "matched_keywords": [
+      "duplex",
+      "investment"
+    ],
+    "scraped_at": "2026-07-19T03:50:18.635844",
+    "unique_id": "16a796c2d0896471"
+  },
+  {
+    "title": "For Sale a 1985 3 bedroom 2 full bathrooms.14x80 mobile home for sale.",
+    "price": 65000,
+    "location": "Dousman Wisconsin",
+    "listing_url": "https://www.craigslist.org/view/d/dousman-for-sale-bedroom-full/hWEKPRcLwyKuys78faRrqu",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:19.695709",
+    "unique_id": "7232f7d6e544c94f"
+  },
+  {
+    "title": "Land for sale",
+    "price": 239900,
+    "location": "West bend",
+    "listing_url": "https://www.craigslist.org/view/d/west-bend-land-for-sale/udukrJCVamahE3yrPHwEVu",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:19.708625",
+    "unique_id": "066560606633ea8a"
+  },
+  {
+    "title": "Chevi-Park Ranch Available",
+    "price": 159900,
+    "location": "Milwaukee",
+    "listing_url": "https://www.craigslist.org/view/d/milwaukee-chevi-park-ranch-available/mDEQDTH6nNYnrzcNf4k2Qb",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:19.720474",
+    "unique_id": "2936d4e798e59ca7"
+  },
+  {
+    "title": "Lannon Estates Manufactured Home Available",
+    "price": 132000,
+    "location": "Lannon",
+    "listing_url": "https://www.craigslist.org/view/d/lannon-lannon-estates-manufactured-home/vQ3JE3Yu9VqhqvhCaUQcZ6",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:19.730940",
+    "unique_id": "a620c595d712c26a"
+  },
+  {
+    "title": "Active 55+ Community 3 Bedroom 2 Bath Don't miss out on this Beauty!",
+    "price": 129995,
+    "location": "Apache Junction",
+    "listing_url": "https://www.craigslist.org/view/d/apache-junction-active-55-community/icRMA79BqG79xw8QuiS1DY",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:19.747061",
+    "unique_id": "ce92adaa62326ce0"
+  },
+  {
+    "title": "Brookside Meadows Manufactured Home",
+    "price": 122500,
+    "location": "Germantown",
+    "listing_url": "https://www.craigslist.org/view/d/germantown-brookside-meadows/6yn6MVVAgMp29itPu6AZMg",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:19.765745",
+    "unique_id": "75b9ebff6427e940"
+  },
+  {
+    "title": "Lannon Estates Manufactured Home Available",
+    "price": 100000,
+    "location": "Lannon",
+    "listing_url": "https://www.craigslist.org/view/d/lannon-lannon-estates-manufactured-home/cdtduW4ED4gd96LkoALF6a",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:19.774912",
+    "unique_id": "0cd0f1c8800d561c"
+  },
+  {
+    "title": "Ten Acres with Woods, Meadow, and a Stream in the Back",
+    "price": 98900,
+    "location": "Tomahawk",
+    "listing_url": "https://www.craigslist.org/view/d/tripoli-ten-acres-with-woods-meadow-and/6sm8NhrSXqbfHWnPmWxKdM",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:19.792142",
+    "unique_id": "03432e4dd774f9f0"
+  },
+  {
+    "title": "Five Wooded Acres Near Rome Area Lakes and Golf Courses",
+    "price": 86900,
+    "location": "Rome",
+    "listing_url": "https://www.craigslist.org/view/d/nekoosa-five-wooded-acres-near-rome/8ofY9XnYxnhRBjGw22QMSa",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:19.805208",
+    "unique_id": "7df307056e753b23"
+  },
+  {
+    "title": "Beautiful Condo in Great Location",
+    "price": 249900,
+    "location": "Reedsburg",
+    "listing_url": "https://www.craigslist.org/view/d/reedsburg-beautiful-condo-in-great/6Fw8HVw3idfrpRTGQbqzJ3",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:19.819969",
+    "unique_id": "27da8379648c5cbb"
+  },
+  {
+    "title": "Milwaukee Distressed Properties",
+    "price": 59900,
+    "location": null,
+    "listing_url": "https://www.craigslist.org/view/d/milwaukee-milwaukee-distressed/2nxeiHk5NVzreNAesm6YSZ",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:19.874888",
+    "unique_id": "357d8b7fff479a1f"
+  },
+  {
+    "title": "Updated 1996 Marshfield Energy Saver (16x72)",
+    "price": 58000,
+    "location": "Greenvalley III",
+    "listing_url": "https://www.craigslist.org/view/d/jackson-updated-1996-marshfield-energy/9sQYXQiaUahMyov1aiBDKY",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:19.959990",
+    "unique_id": "8d9164f6ded09c96"
+  },
+  {
+    "title": "Value Add Properties for Sale!",
+    "price": 175000,
+    "location": "milwaukee",
+    "listing_url": "https://www.craigslist.org/view/d/milwaukee-value-add-properties-for-sale/gzLmqWcKbXu6HZ1WAUFEMT",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:20.027046",
+    "unique_id": "4896e736f4fa3b7d"
+  },
+  {
+    "title": "Distressed Houses, for sale As-Is condition",
+    "price": 180000,
+    "location": "milwaukee",
+    "listing_url": "https://www.craigslist.org/view/d/milwaukee-distressed-houses-for-sale-as/hu6Bd5DH2nuSNHCkQCbTyQ",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:20.081736",
+    "unique_id": "9cd445389a7eb31a"
+  },
+  {
+    "title": "SELL ASAP - HUGE Duplex for sale by Owner - Motivated",
+    "price": 120000,
+    "location": null,
+    "listing_url": "https://www.craigslist.org/view/d/milwaukee-sell-asap-huge-duplex-for/1aD8rrzgsyK24kddWJFn8b",
+    "city": "milwaukee",
+    "matched_keywords": [
+      "duplex"
+    ],
+    "scraped_at": "2026-07-19T03:50:20.129490",
+    "unique_id": "b7ebabfeb4537a81"
+  },
+  {
+    "title": "SELL ASAP - 4/3 Duplex Fully Occupied Cash Flowing",
+    "price": 120000,
+    "location": null,
+    "listing_url": "https://www.craigslist.org/view/d/milwaukee-sell-asap-duplex-fully/9wWRrE3rrQiedMJFxDcQ5k",
+    "city": "milwaukee",
+    "matched_keywords": [
+      "duplex"
+    ],
+    "scraped_at": "2026-07-19T03:50:20.144085",
+    "unique_id": "90b66880d7fc4a59"
+  },
+  {
+    "title": "For Sale: $134,900 – Turnkey, Complete updated Milwaukee Home",
+    "price": 134900,
+    "location": "Milwaukee",
+    "listing_url": "https://www.craigslist.org/view/d/milwaukee-for-sale-turnkey-complete/24Mp4XC1G8JvDD6ersYWhy",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:20.154713",
+    "unique_id": "4e6111ce9b658b46"
+  },
+  {
+    "title": "🏡OFF MARKET OPEN HOUSE – Investment Opportunity Saturday 06-20-26",
+    "price": 110000,
+    "location": null,
+    "listing_url": "https://www.craigslist.org/view/d/milwaukee-off-market-open-house/hUJyJ8BKtn5oL8jYrymJbD",
+    "city": "milwaukee",
+    "matched_keywords": [
+      "investment"
+    ],
+    "scraped_at": "2026-07-19T03:50:20.194685",
+    "unique_id": "32ccefa4e927fc6b"
+  },
+  {
+    "title": "Milwaukee Condo 3/1.5 ~Ready to Rent",
+    "price": 78000,
+    "location": null,
+    "listing_url": "https://www.craigslist.org/view/d/milwaukee-milwaukee-condo-15-ready-to/qE5o4k7x8uPni5cTDy5PFU",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:20.232819",
+    "unique_id": "f2e2cc91d269bd03"
+  },
+  {
+    "title": "$50,000 2BR/2Bath home (Sussex) WI - Retirement Community",
+    "price": 50000,
+    "location": "Sussex",
+    "listing_url": "https://www.craigslist.org/view/d/lannon-br-2bath-home-sussex-wi/rKEgodZUQUvzHLB3dbeNqo",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:20.242541",
+    "unique_id": "c0fa7f70a204dc02"
+  },
+  {
+    "title": "Franklin Lot For Sale",
+    "price": 165900,
+    "location": "Franklin WI.",
+    "listing_url": "https://www.craigslist.org/view/d/franklin-franklin-lot-for-sale/kpHzU23c4gYyQj4uzoUAyx",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:20.255421",
+    "unique_id": "0c0c34eed3f9a2bc"
+  },
+  {
+    "title": "A piece of commercial lot for sale",
+    "price": 125000,
+    "location": "Minneapolis",
+    "listing_url": "https://www.craigslist.org/view/d/minneapolis-piece-of-commercial-lot-for/mspdCfef5TCFcQV62joZRv",
+    "city": "milwaukee",
+    "matched_keywords": [],
+    "scraped_at": "2026-07-19T03:50:20.270646",
+    "unique_id": "e18c248fb39db036"
+  }
+]

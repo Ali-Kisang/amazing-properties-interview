@@ -1,0 +1,112 @@
+version: '3.8'
+
+services:
+  scraper:
+    build: .
+    container_name: amazing-properties-scraper
+    environment:
+      - FACEBOOK_ACCESS_TOKEN=${FACEBOOK_ACCESS_TOKEN}
+      - FACEBOOK_USER_ID=${FACEBOOK_USER_ID}
+      - FACEBOOK_PAGE_ID=${FACEBOOK_PAGE_ID}
+      - ENABLE_POSTGRESQL=true
+      - ENABLE_MYSQL=true
+      - ENABLE_MONGODB=true
+      - PG_HOST=postgres
+      - MYSQL_HOST=mysql
+      - MONGO_HOST=mongodb
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    depends_on:
+      - postgres
+      - mysql
+      - mongodb
+    networks:
+      - scraper-network
+    restart: unless-stopped
+
+  # PostgreSQL
+  postgres:
+    image: postgres:15-alpine
+    container_name: scraper-postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=listings
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - scraper-network
+    restart: unless-stopped
+
+  # MySQL
+  mysql:
+    image: mysql:8.0
+    container_name: scraper-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=listings
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - scraper-network
+    restart: unless-stopped
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+  # MongoDB
+  mongodb:
+    image: mongo:7.0
+    container_name: scraper-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - scraper-network
+    restart: unless-stopped
+
+  # phpMyAdmin for MySQL (optional)
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: scraper-phpmyadmin
+    environment:
+      - PMA_HOST=mysql
+      - PMA_PORT=3306
+      - UPLOAD_LIMIT=100M
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+    networks:
+      - scraper-network
+    restart: unless-stopped
+
+  # pgAdmin for PostgreSQL (optional)
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: scraper-pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@example.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - scraper-network
+    restart: unless-stopped
+
+networks:
+  scraper-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
+  mysql-data:
+  mongo-data:

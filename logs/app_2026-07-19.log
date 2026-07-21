@@ -1,0 +1,257 @@
+2026-07-19 02:00:35.821 | INFO     | __main__:run_scraper:24 -  Starting Craigslist scraper...
+2026-07-19 02:01:58.705 | INFO     | __main__:run_scraper:24 - 🕷️ Starting Craigslist scraper...
+2026-07-19 02:03:19.717 | INFO     | __main__:run_scraper:24 - 🕷️ Starting Craigslist scraper...
+2026-07-19 02:03:23.285 | INFO     | __main__:run_scraper:39 - 📁 Changed to directory: C:\Users\user\OneDrive\Desktop\Web Development\amazing-properties-assessment\craigslist_scraper
+2026-07-19 02:14:14.376 | INFO     | __main__:run_scraper:24 - 🕷️ Starting Craigslist scraper...
+2026-07-19 02:14:16.748 | INFO     | __main__:run_scraper:38 - 📁 Changed to directory: C:\Users\user\OneDrive\Desktop\Web Development\amazing-properties-assessment\craigslist_scraper
+2026-07-19 02:14:17.285 | ERROR    | __main__:run_scraper:55 - ❌ Scraper failed: No module named 'scrapy.loader.processors'
+2026-07-19 02:29:25.339 | INFO     | __main__:run_scraper:24 - 🕷️ Starting Craigslist scraper...
+2026-07-19 02:29:27.959 | INFO     | __main__:run_scraper:38 - 📁 Changed to directory: C:\Users\user\OneDrive\Desktop\Web Development\amazing-properties-assessment\craigslist_scraper
+2026-07-19 02:29:29.714 | INFO     | spiders.craigslist_spider:__init__:35 - 🕷️ Spider initialized for cities: milwaukee, columbus
+2026-07-19 02:29:29.739 | INFO     | spiders.craigslist_spider:__init__:36 - 💰 Price range: $50,000 - $250,000
+2026-07-19 02:29:29.753 | INFO     | spiders.craigslist_spider:__init__:37 - 🎯 Target listings: 50
+2026-07-19 02:29:33.499 | INFO     | spiders.craigslist_spider:closed:200 - 📊 Spider closed: shutdown
+2026-07-19 02:29:33.503 | INFO     | spiders.craigslist_spider:closed:201 - ✅ Total unique listings collected: 0
+2026-07-19 03:06:00.896 | INFO     | __main__:run_scraper:24 - 🕷️ Starting Craigslist scraper...
+2026-07-19 03:06:02.394 | INFO     | __main__:run_scraper:38 - 📁 Changed to directory: C:\Users\user\OneDrive\Desktop\Web Development\amazing-properties-assessment\craigslist_scraper
+2026-07-19 03:06:03.017 | ERROR    | __main__:run_scraper:55 - ❌ Scraper failed: 'Spider not found: craigslist'
+2026-07-19 03:11:14.716 | INFO     | __main__:run_scraper:24 - 🕷️ Starting Craigslist scraper...
+2026-07-19 03:11:16.767 | INFO     | __main__:run_scraper:38 - 📁 Changed to directory: C:\Users\user\OneDrive\Desktop\Web Development\amazing-properties-assessment\craigslist_scraper
+2026-07-19 03:11:22.445 | INFO     | pipelines_database:open_spider:58 -  PostgreSQL connected. Table 'listings' ready.
+2026-07-19 03:11:22.911 | INFO     | pipelines_database:open_spider:179 -  MySQL connected. Table 'listings' ready.
+2026-07-19 03:11:23.564 | INFO     | pipelines_database:open_spider:278 -  MongoDB connected. Database: 'listings', Collection: 'listings'
+2026-07-19 03:11:23.579 | INFO     | pipelines_database:close_spider:322 -  MongoDB connection closed.
+2026-07-19 03:11:23.590 | INFO     | pipelines_database:close_spider:246 -  MySQL connection closed.
+2026-07-19 03:11:23.596 | INFO     | pipelines_database:close_spider:125 -  PostgreSQL connection closed.
+2026-07-19 03:11:23.599 | WARNING  | pipelines:close_spider:115 - No items to export
+2026-07-19 03:50:06.616 | INFO     | __main__:run_scraper:24 - 🕷️ Starting Craigslist scraper...
+2026-07-19 03:50:07.904 | INFO     | __main__:run_scraper:38 - 📁 Changed to directory: C:\Users\user\OneDrive\Desktop\Web Development\amazing-properties-assessment\craigslist_scraper
+2026-07-19 03:50:10.647 | INFO     | pipelines_database:open_spider:58 -  PostgreSQL connected. Table 'listings' ready.
+2026-07-19 03:50:10.979 | INFO     | pipelines_database:open_spider:179 -  MySQL connected. Table 'listings' ready.
+2026-07-19 03:50:11.434 | INFO     | pipelines_database:open_spider:278 -  MongoDB connected. Database: 'listings', Collection: 'listings'
+2026-07-19 03:50:18.058 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.201 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.216 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.230 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.257 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.274 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.291 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.309 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.338 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.369 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.382 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.401 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.410 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.426 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.453 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.469 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.487 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.506 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.520 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.539 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.557 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.570 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.583 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.594 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.608 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.619 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:18.636 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:19.696 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:19.709 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:19.721 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:19.733 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:19.749 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:19.767 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:19.775 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:19.793 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:19.806 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:19.820 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:19.875 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:19.960 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:20.027 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:20.082 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:20.130 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:20.144 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:20.155 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:20.195 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:20.233 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:20.243 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:20.256 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:20.271 | ERROR    | pipelines_database:process_item:114 -  PostgreSQL insert failed: column "updated_at" of relation "listings" does not exist
+LINE 15:                     updated_at = CURRENT_TIMESTAMP
+                             ^
+
+2026-07-19 03:50:20.289 | INFO     | pipelines_database:close_spider:322 -  MongoDB connection closed.
+2026-07-19 03:50:20.291 | INFO     | pipelines_database:close_spider:246 -  MySQL connection closed.
+2026-07-19 03:50:20.293 | INFO     | pipelines_database:close_spider:125 -  PostgreSQL connection closed.
+2026-07-19 03:50:20.303 | INFO     | pipelines:close_spider:174 - 📄 Exported 49 items to ..\data\listings_20260719_035010.json
+2026-07-19 03:50:23.826 | INFO     | pipelines:close_spider:181 - 📊 Exported 49 items to ..\data\listings_20260719_035010.csv
+2026-07-19 03:54:57.326 | INFO     | __main__:run_scraper:24 - 🕷️ Starting Craigslist scraper...
+2026-07-19 03:54:58.472 | INFO     | __main__:run_scraper:38 - 📁 Changed to directory: C:\Users\user\OneDrive\Desktop\Web Development\amazing-properties-assessment\craigslist_scraper
+2026-07-19 03:55:00.726 | INFO     | pipelines_database:open_spider:64 -  PostgreSQL connected. Table 'listings' ready.
+2026-07-19 03:55:00.951 | INFO     | pipelines_database:open_spider:185 -  MySQL connected. Table 'listings' ready.
+2026-07-19 03:55:01.299 | INFO     | pipelines_database:open_spider:284 -  MongoDB connected. Database: 'listings', Collection: 'listings'
+2026-07-19 03:55:08.601 | INFO     | pipelines_database:close_spider:328 -  MongoDB connection closed.
+2026-07-19 03:55:08.602 | INFO     | pipelines_database:close_spider:252 -  MySQL connection closed.
+2026-07-19 03:55:08.603 | INFO     | pipelines_database:close_spider:131 -  PostgreSQL connection closed.
+2026-07-19 03:55:08.607 | INFO     | pipelines:close_spider:174 - 📄 Exported 49 items to ..\data\listings_20260719_035500.json
+2026-07-19 03:55:10.311 | INFO     | pipelines:close_spider:181 - 📊 Exported 49 items to ..\data\listings_20260719_035500.csv
+2026-07-19 12:45:41.697 | INFO     | __main__:run_facebook:60 -  Starting Facebook automation...
+2026-07-19 12:45:42.790 | INFO     | fb_automation.facebook_api:run_demo:102 -  Starting Facebook automation demo...
+2026-07-19 12:45:44.270 | ERROR    | fb_automation.facebook_api:search_posts:56 - Error searching posts: 400 Client Error: Bad Request for url: https://graph.facebook.com/v18.0/search?q=real+estate+investment+Milwaukee&type=post&limit=10&access_token=YOUR_ACCESS_TOKEN_HERE&fields=id%2Cmessage%2Ccreated_time%2Cfrom%2Cpermalink_url
+2026-07-19 12:45:44.276 | WARNING  | fb_automation.facebook_api:run_demo:110 - No posts found
+2026-07-19 12:45:44.303 | INFO     | __main__:run_facebook:65 -  Facebook automation completed!
+2026-07-19 12:49:45.486 | INFO     | __main__:run_scraper:24 -  Starting Craigslist scraper...
+2026-07-19 12:49:48.166 | INFO     | __main__:run_scraper:38 -  Changed to directory: C:\Users\user\OneDrive\Desktop\Web Development\amazing-properties-assessment\craigslist_scraper
+2026-07-19 12:49:54.520 | INFO     | pipelines_database:open_spider:64 -  PostgreSQL connected. Table 'listings' ready.
+2026-07-19 12:49:54.844 | INFO     | pipelines_database:open_spider:185 -  MySQL connected. Table 'listings' ready.
+2026-07-19 12:49:55.963 | INFO     | pipelines_database:open_spider:284 -  MongoDB connected. Database: 'listings', Collection: 'listings'
+2026-07-19 12:50:03.509 | INFO     | pipelines_database:close_spider:328 -  MongoDB connection closed.
+2026-07-19 12:50:03.511 | INFO     | pipelines_database:close_spider:252 -  MySQL connection closed.
+2026-07-19 12:50:03.511 | INFO     | pipelines_database:close_spider:131 -  PostgreSQL connection closed.
+2026-07-19 12:50:03.517 | INFO     | pipelines:close_spider:174 - 📄 Exported 49 items to ..\data\listings_20260719_124953.json
+2026-07-19 12:50:10.964 | INFO     | pipelines:close_spider:181 - 📊 Exported 49 items to ..\data\listings_20260719_124953.csv

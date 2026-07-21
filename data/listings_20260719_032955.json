@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Fix & Flip - Columbus, OH !!! 🏠🔨",
+    "price": 155000,
+    "location": "Columbus OH",
+    "listing_url": "https://www.craigslist.org/view/d/columbus-fix-flip-columbus-oh/pCdSfVwMWxLNMFVvzq9LXf",
+    "city": "columbus",
+    "scraped_at": "2026-07-19T03:30:02.042067",
+    "unique_id": "c99a1271a5b2941f"
+  },
+  {
+    "title": "For Sale: $134,900 – Turnkey, Complete updated Milwaukee Home",
+    "price": 134900,
+    "location": "Milwaukee",
+    "listing_url": "https://www.craigslist.org/view/d/milwaukee-for-sale-turnkey-complete/24Mp4XC1G8JvDD6ersYWhy",
+    "city": "milwaukee",
+    "scraped_at": "2026-07-19T03:30:02.417197",
+    "unique_id": "4e6111ce9b658b46"
+  },
+  {
+    "title": "🏡OFF MARKET OPEN HOUSE – Investment Opportunity Saturday 06-20-26",
+    "price": 110000,
+    "location": null,
+    "listing_url": "https://www.craigslist.org/view/d/milwaukee-off-market-open-house/hUJyJ8BKtn5oL8jYrymJbD",
+    "city": "milwaukee",
+    "scraped_at": "2026-07-19T03:30:02.417520",
+    "unique_id": "32ccefa4e927fc6b"
+  }
+]
