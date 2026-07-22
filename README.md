@@ -1,4 +1,4 @@
-Here's the rewritten README focused on showcasing what you've built, not coaching them on how to build it:
+Here's the updated README with the correct run instructions and Docker listed as an optional feature:
 
 ---
 
@@ -45,7 +45,7 @@ This is my completed assessment submission for the **Software Developer / Web Sc
 | - PostgreSQL | ✅ Full implementation |
 | - MySQL | ✅ Full implementation |
 | - MongoDB | ✅ Full implementation |
-| **Docker Support** | ✅ Multi-container setup |
+| **Docker Support** | ✅ Optional multi-container setup |
 | **Testing** | ✅ 16 unit tests |
 
 ---
@@ -110,18 +110,23 @@ amazing-properties-assessment/
 │   ├── pipelines.py          # Data cleaning & validation
 │   └── pipelines_database.py # Database storage
 │
-├── fb_automation/           # Facebook Graph API integration
-│   └── facebook_api.py      # Post commenting implementation
+├── fb_automation/           # Facebook automation
+│   ├── playwright_runner.py # Main automation runner
+│   ├── scraper.py           # Feed scraper with selectors
+│   ├── commenter.py         # Comment automation
+│   ├── login.py             # Facebook login handling
+│   └── browser.py           # Browser management
 │
 ├── config/                  # Application configuration
-├── utils/                   # Utility modules (scheduler, logging)
+├── utils/                   # Utility modules
 ├── tests/                   # Unit tests
-├── data/                    # Scraped data output (JSON, CSV)
+├── data/                    # Scraped data output
 ├── logs/                    # Application logs
 │
 ├── main.py                  # Main entry point
-├── setup_database.py        # Database schema setup
-├── docker-compose.yml       # Docker services
+├── requirements.txt         # Python dependencies
+├── .env.example             # Environment variables template
+├── docker-compose.yml       # Optional Docker services
 ├── Makefile                 # Make commands
 └── README.md               # This file
 ```
@@ -132,7 +137,7 @@ amazing-properties-assessment/
 
 ### Prerequisites
 - Python 3.8+
-- Docker (optional, for database services)
+- PostgreSQL, MySQL, or MongoDB (optional - for database storage)
 
 ### Installation
 
@@ -140,72 +145,124 @@ amazing-properties-assessment/
 # Clone repository
 git clone https://github.com/Ali-Kisang/amazing-properties-interview.git
 
-# Setup virtual environment
+# Navigate to project
+cd amazing-properties-assessment
+
+# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Activate virtual environment
+# Windows:
+venv\Scripts\activate
+# Mac/Linux:
+source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
 ```
 
 ### Configuration
-Copy `.env.example` to `.env` and add your credentials:
-- **Required**: Facebook Access Token
-- **Optional**: Database credentials (PostgreSQL, MySQL, MongoDB)
-
-### Run the Scraper
 
 ```bash
-# Interactive menu
+# Copy environment template
+cp .env.example .env
+
+# Edit .env with your credentials
+# Required for Facebook Automation:
+FACEBOOK_ACCESS_TOKEN=your_token_here
+FACEBOOK_PAGE_ID=your_page_id_here
+
+# Optional for Database Storage:
+POSTGRES_HOST=localhost
+POSTGRES_DB=properties
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=your_password
+
+# Scraper Settings:
+CRAIGSLIST_CITIES=milwaukee,columbus
+MAX_LISTINGS=50
+ENABLE_PAGINATION=true
+```
+
+---
+
+## ▶️ Running the Application
+
+### Interactive Menu (Recommended)
+
+```bash
 python main.py
+```
 
-# Or use Make commands
-make scrape       # Run scraper only
+This launches an interactive menu:
+
+```
+============================================================
+ AMAZING PROPERTIES - ASSESSMENT
+============================================================
+1. Run Craigslist Scraper
+2. Run Facebook Automation
+3. Run Everything
+4. Exit
+============================================================
+Select option (1-4): 
+```
+
+**Option 1 - Craigslist Scraper**
+- Scrapes real estate listings from Milwaukee and Columbus
+- Saves output to JSON and CSV files
+- Stores data in configured databases
+
+**Option 2 - Facebook Automation**
+- Opens authenticated Facebook session
+- Scrapes posts from the feed
+- Comments on selected posts
+
+**Option 3 - Run Everything**
+- Runs Craigslist scraper first
+- Then runs Facebook automation
+- Complete end-to-end workflow
+
+**Option 4 - Exit**
+- Exits the application
+
+### Command Line Options
+
+```bash
+# Run Craigslist scraper only
+python -m craigslist_scraper
+
+# Run Facebook automation only
+python -m fb_automation
+
+# Run with custom settings
+python main.py --cities milwaukee,columbus --max-listings 100
+```
+
+### Using Make Commands
+
+```bash
+make scrape       # Run Craigslist scraper only
 make facebook     # Run Facebook automation only
-make docker-up    # Start database services
-```
-
-### Output Location
-- **JSON**: `data/listings_TIMESTAMP.json`
-- **CSV**: `data/listings_TIMESTAMP.csv`
-- **Databases**: Configured in `.env`
-
----
-
-## 🧪 Testing
-
-```bash
-# Run all tests
-make test
-
-# Run with coverage
-pytest tests/ -v --cov=craigslist_scraper --cov-report=html
-```
-
-**Test Coverage**: ✅ 16 tests passing
-
----
-
-## 🐳 Docker Support
-
-Quickly spin up database services:
-
-```bash
-# Start all database containers
-make docker-up
-
-# Access databases:
-# PostgreSQL: localhost:5432 (user: postgres, pass: postgres)
-# MySQL: localhost:3306 (user: root, pass: root)
-# MongoDB: localhost:27017
-
-# Stop containers
-make docker-down
+make test         # Run unit tests
+make format       # Format code with black
+make clean        # Clean temporary files
 ```
 
 ---
 
-## 📊 Sample Output
+## 📤 Output Location
+
+| Format | Location |
+|--------|----------|
+| **JSON** | `data/listings_TIMESTAMP.json` |
+| **CSV** | `data/listings_TIMESTAMP.csv` |
+| **PostgreSQL** | Configured in `.env` |
+| **MySQL** | Configured in `.env` |
+| **MongoDB** | Configured in `.env` |
+| **Logs** | `logs/scraper_TIMESTAMP.log` |
+
+### Sample JSON Output
 
 ```json
 {
@@ -227,11 +284,83 @@ make docker-down
 
 ---
 
+## 🗄️ Database Setup (Optional)
+
+The application supports PostgreSQL, MySQL, and MongoDB for persistent storage. Configure your preferred database in `.env` and run:
+
+### Option 1: Local Database Setup
+
+```bash
+# PostgreSQL
+createdb properties
+psql -d properties -f setup_database.sql
+
+# MySQL
+mysql -u root -p -e "CREATE DATABASE properties;"
+mysql -u root -p properties < setup_database.sql
+
+# MongoDB
+mongosh --eval "use properties"
+```
+
+### Option 2: Docker (Optional)
+
+If you have Docker installed, you can quickly spin up all databases:
+
+```bash
+# Start all database containers
+docker-compose up -d
+
+# Access databases:
+# PostgreSQL: localhost:5432 (user: postgres, pass: postgres)
+# MySQL: localhost:3306 (user: root, pass: root)
+# MongoDB: localhost:27017
+
+# Stop containers
+docker-compose down
+```
+
+**Note**: Docker is optional and not required to run the scraper. It's provided as a convenience for database setup.
+
+---
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+make test
+
+# Run with coverage
+pytest tests/ -v --cov=craigslist_scraper --cov-report=html
+
+# Run specific test file
+pytest tests/test_craigslist.py -v
+```
+
+**Test Coverage**: ✅ 16 tests passing
+
+---
+
+## 📊 Facebook Automation Details
+
+### How It Works
+
+1. **Browser Launch**: Launches Chrome with stealth settings
+2. **Session Detection**: Checks for existing Facebook session
+3. **Feed Scraping**: Extracts posts using multiple selectors
+4. **Commenting**: Posts comments with human-like delays
+
+### Demo Recording
+
+[Facebook Automation Demo](https://drive.google.com/file/d/1fDoZHfvaHE4nA7R-1hmZH_ExQBqMVgu9/view?usp=sharing)
+
+---
+
 ## 📧 Submission Links
 
 - **GitHub Repository**: https://github.com/Ali-Kisang/amazing-properties-interview
 - **Video Interview**: https://drive.google.com/file/d/1AVVWcz-QLKz-KvNfy87unshHFbrwLExc/view?usp=sharing
-- **Facebook Demo Recording**: [Your Google Drive/Dropbox link]
+- **Facebook Demo Recording**: https://drive.google.com/file/d/1fDoZHfvaHE4nA7R-1hmZH_ExQBqMVgu9/view?usp=sharing
 
 ---
 
@@ -241,29 +370,36 @@ Thank you for reviewing my assessment. I look forward to discussing how I can co
 
 ---
 
-**Built  for Amazing Properties**  
+**Built for Amazing Properties**  
 **Developer:** Alex Kisang  
 **Date:** July 2026
 
 ---
 
-### ✅ Quick Commands Reference
+## ✅ Quick Commands Reference
 
 ```bash
 # Setup
 pip install -r requirements.txt
 cp .env.example .env
+# Edit .env with your credentials
 
-# Run
-python main.py          # Interactive menu
-make scrape            # Run scraper
-make facebook          # Run Facebook automation
+# Run (Interactive Menu)
+python main.py
 
-# Database
-make docker-up         # Start databases
-make docker-down       # Stop databases
+# Run Components
+make scrape          # Run Craigslist scraper only
+make facebook        # Run Facebook automation only
 
-# Test
-make test              # Run tests
-make format            # Format code
+# Testing
+make test            # Run all tests
+pytest tests/ -v     # Run tests with output
+
+# Optional Docker (for databases only)
+docker-compose up -d     # Start databases
+docker-compose down      # Stop databases
+
+# Code Quality
+make format          # Format code with black
+make clean           # Clean temporary files
 ```
