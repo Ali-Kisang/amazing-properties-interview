@@ -352,7 +352,7 @@ pytest tests/test_craigslist.py -v
 
 ### Demo Recording
 
-[Facebook Automation Demo](https://drive.google.com/file/d/1fDoZHfvaHE4nA7R-1hmZH_ExQBqMVgu9/view?usp=sharing)
+[Facebook Automation Demo](https://drive.google.com/file/d/1VZXLmBHDumciqvgbcvYaNx8EcGpV6gY_/view?usp=sharing)
 
 ---
 
@@ -360,7 +360,7 @@ pytest tests/test_craigslist.py -v
 
 - **GitHub Repository**: https://github.com/Ali-Kisang/amazing-properties-interview
 - **Video Interview**: https://drive.google.com/file/d/1AVVWcz-QLKz-KvNfy87unshHFbrwLExc/view?usp=sharing
-- **Facebook Demo Recording**: https://drive.google.com/file/d/1fDoZHfvaHE4nA7R-1hmZH_ExQBqMVgu9/view?usp=sharing
+- **Facebook Demo Recording**: https://drive.google.com/file/d/1VZXLmBHDumciqvgbcvYaNx8EcGpV6gY_/view?usp=sharing
 
 ---
 
